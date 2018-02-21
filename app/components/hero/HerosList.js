@@ -1,7 +1,10 @@
 import React , {Component} from 'react';
+import PropTypes from "prop-types";
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as stuffActions from '../../actions/stuffActions';
 import Title from '../shared/Title';
 import Card from '../shared/Card';
-const credentials = require('../shared/credentials');
 class HerosList extends Component{
   constructor(props) {
    super(props);
@@ -9,27 +12,10 @@ class HerosList extends Component{
    this.state = {heros: []};
  }
  componentDidMount() {
-   this.getHeros();
- }
-
- getHeros() {
-   const that = this;
-   $.getJSON(credentials.url, {
-   ts: credentials.ts,
-   apikey: credentials.PUBLIC_KEY,
-   hash: credentials.hash,
-   })
-   .done(function(response) {
-     that.setState({heros : response.data.results});
-     console.log(that.state)
-   })
-   .fail(function(err){
-     // error logs
-     console.log(err);
-   });
+   this.props.stuffActions.fetchHeros();
  }
   render() {
-    const herosList = this.state.heros.map(hero => {
+    const herosList = this.props.heros.map(hero => {
       return(<div key={"hero"+ hero.id} className="col-sm-6 col-md-4 col-lg-3 mt-4"><Card heroId={hero.id} content={hero.name} imageSrc={hero.thumbnail.path} /></div>
       )
     });
@@ -37,4 +23,21 @@ class HerosList extends Component{
     );
   }
 }
-export default HerosList;
+HerosList.propTypes = {
+    stuffActions: PropTypes.object,
+    heros: PropTypes.array
+};
+function mapStateToProps(state) {
+    return {
+        heros: state.heros
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        stuffActions: bindActionCreators(stuffActions, dispatch)
+    };
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(HerosList);

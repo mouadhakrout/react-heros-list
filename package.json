@@ -30,6 +30,8 @@
     "react-router": "2.6.1",
     "react-slick": "^0.18.1",
     "react-tooltip": "3.1.5",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "slick-carousel": "^1.8.1",
     "tether": "^1.4.3"
   },
