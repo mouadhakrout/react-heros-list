@@ -33,7 +33,7 @@ class HerosList extends Component{
       return(<div key={"hero"+ hero.id} className="col-sm-6 col-md-4 col-lg-3 mt-4"><Card heroId={hero.id} content={hero.name} imageSrc={hero.thumbnail.path} /></div>
       )
     });
-    return(<div className="container"><Title color={"#FF00FF"} content={"Liste des super héros :"} /><div className="row">{herosList}</div></div>
+    return(<div className="container"><Title color={"#ec008c"} content={"Liste des super héros :"} /><div className="row">{herosList}</div></div>
     );
   }
 }

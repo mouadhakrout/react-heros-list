@@ -15,20 +15,23 @@
   },
   "dependencies": {
     "axios": "0.13.1",
-    "bootstrap": "^3.3.5",
+    "bootstrap": "^4.0.0-alpha.6",
     "crypto-js": "^3.1.9-1",
     "flickity": "^2.0.10",
     "history": "^3.0.0",
+    "jquery": "^3.3.1",
     "js-md5": "^0.7.3",
     "moment": "^2.10.6",
     "prop-types": "^15.6.0",
     "react": "15.3.0",
     "react-dom": "15.3.0",
     "react-flickity": "^1.0.8",
+    "react-redux": "^5.0.7",
     "react-router": "2.6.1",
     "react-slick": "^0.18.1",
     "react-tooltip": "3.1.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tether": "^1.4.3"
   },
   "devDependencies": {
     "babel-core": "6.13.2",

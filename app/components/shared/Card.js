@@ -7,8 +7,7 @@ class Card extends Component{
   }
   render() {
     const cardStyle = {
-      textAlign: 'center',borderRadius: '5px',background:'lightgray',
-      boxShadow: '0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5'
+        height: '300px', textAlign: 'center',borderRadius: '5px',background:'lightgray', boxShadow: '0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5'
     };
     const cardBlockStyle = {
         background:'#FFF',
@@ -16,7 +15,8 @@ class Card extends Component{
     }
     return(
       <div className="card" style={cardStyle} role="button">
-        <img className="card-img-top" src={this.props.imageSrc+"/portrait_xlarge.jpg"} onClick={this.handleOnClick} alt="Hero Card image" />
+        <img className="card-img-top"  ref={img => this.img = img} src={this.props.imageSrc+"/portrait_xlarge.jpg"}
+             onError={() => this.img.src = '../../../assets/img/not-found.png'}style={{height: '225px'}} onClick={this.handleOnClick} alt="Hero Card image" />
           <div className="card-block"style={cardBlockStyle}>
           <h4 className="card-title">{this.props.content}</h4>
         </div>
