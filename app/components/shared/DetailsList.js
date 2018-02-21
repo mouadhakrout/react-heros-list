@@ -1,10 +1,11 @@
 import React , {Component} from 'react';
 import Title from "./Title";
+import PropTypes from "prop-types";
 class DetailsList extends Component{
     render() {
         const details = this.props.details;
         const items = details.items.map(item => {
-            return (<li>{item.name}</li>);
+            return (<li key={item.name}>{item.name}</li>);
         });
 
         return(
@@ -16,4 +17,8 @@ class DetailsList extends Component{
         );
     }
 }
+DetailsList.propTypes = {
+    details: PropTypes.object,
+    title: PropTypes.string,
+};
 export default DetailsList;

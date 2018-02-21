@@ -17,14 +17,18 @@
     "axios": "0.13.1",
     "bootstrap": "^3.3.5",
     "crypto-js": "^3.1.9-1",
+    "flickity": "^2.0.10",
     "history": "^3.0.0",
     "js-md5": "^0.7.3",
     "moment": "^2.10.6",
     "prop-types": "^15.6.0",
     "react": "15.3.0",
     "react-dom": "15.3.0",
+    "react-flickity": "^1.0.8",
     "react-router": "2.6.1",
-    "react-tooltip": "3.1.5"
+    "react-slick": "^0.18.1",
+    "react-tooltip": "3.1.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "babel-core": "6.13.2",

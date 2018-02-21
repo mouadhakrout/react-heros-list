@@ -1,5 +1,6 @@
 import React , {Component} from 'react';
 import Title from "./Title";
+import PropTypes from "prop-types";
 class Panel extends Component{
     render() {
         return(
@@ -11,4 +12,8 @@ class Panel extends Component{
         );
     }
 }
+Panel.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.string,
+};
 export default Panel;

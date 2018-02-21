@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
-import HerosList from './app/components/shared/hero/HerosList';
-import HeroDetails from './app/components/shared/hero/HeroDetails';
+import HerosList from './app/components/hero/HerosList';
+import HeroDetails from './app/components/hero/HeroDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles.css';
 

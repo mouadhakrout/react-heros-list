@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
-import Title from '../Title';
-import Card from '../Card';
-const credentials = require('../credentials');
+import Title from '../shared/Title';
+import Card from '../shared/Card';
+const credentials = require('../shared/credentials');
 class HerosList extends Component{
   constructor(props) {
    super(props);

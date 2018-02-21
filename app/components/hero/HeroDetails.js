@@ -1,10 +1,10 @@
 import React , {Component} from 'react';
 import {Link} from 'react-router';
 import PropTypes from 'prop-types';
-import Title from '../Title';
-import Panel from '../Panel';
-import DetailsList from "../DetailsList";
-const credentials = require('../credentials');
+import Title from '../shared/Title';
+import Panel from '../shared/Panel';
+import DetailsList from "../shared/DetailsList";
+const credentials = require('../shared/credentials');
 class HeroDetails extends Component{
   constructor(props) {
    super(props);
@@ -22,7 +22,7 @@ class HeroDetails extends Component{
             hash: credentials.hash,
         })
             .done(function(response) {
-                that.setState({hero : response.data.results[0],  isLoading: false});
+                that.setState({hero : response.data.results[0],isLoading: false});
             })
             .fail(function(err){
                 // error logs
@@ -35,10 +35,10 @@ class HeroDetails extends Component{
       <Title color={"#FF00FF"} content={"Fiche identité :"} />
             {!this.state.isLoading &&
             <div className="row">
-                <div className="col-lg-4">
+                <div className="col-lg-2">
                     <img className="card-img-top" src={this.state.hero.thumbnail.path + "/portrait_xlarge.jpg"} alt="Hero Card image"/>
                 </div>
-                <div className="col-lg-8">
+                <div className="col-lg-10">
                         <Panel title={this.state.hero.name} description={this.state.hero.description}></Panel>
                         <DetailsList title={"Comics"} details={this.state.hero.comics}></DetailsList>
                         <DetailsList title={"Series"} details={this.state.hero.series}></DetailsList>

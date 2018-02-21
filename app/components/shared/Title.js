@@ -1,7 +1,8 @@
 import React , {Component} from 'react';
+import PropTypes from "prop-types";
 class Title extends Component{
   render() {
-    let titleStyle = {
+    const titleStyle = {
       color: this.props.color,
     };
     return(
@@ -9,4 +10,8 @@ class Title extends Component{
     );
   }
 }
+Title.propTypes = {
+    color: PropTypes.string,
+    content: PropTypes.string,
+};
 export default Title;
