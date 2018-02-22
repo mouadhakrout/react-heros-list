@@ -1,7 +1,7 @@
 import initialState from './initialState';
 import {FETCH_HEROS, RECEIVE_HEROS , FETCH_HERO , RECEIVE_HERO} from '../actions/actionTypes';
 
-export default function HerosRequests(state = initialState.heros, action) {
+export default function HerosRequest(state = initialState.heros, action) {
     let newState;
     switch (action.type) {
         case FETCH_HEROS:
