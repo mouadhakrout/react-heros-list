@@ -1,7 +1,7 @@
 import initialState from './initialState';
-import {FETCH_HEROS, RECEIVE_HEROS} from '../actions/actionTypes';
+import {FETCH_HEROS, RECEIVE_HEROS , FETCH_HERO , RECEIVE_HERO} from '../actions/actionTypes';
 
-export default function stuff(state = initialState.heros, action) {
+export default function HerosRequests(state = initialState.heros, action) {
     let newState;
     switch (action.type) {
         case FETCH_HEROS:
@@ -15,3 +15,18 @@ export default function stuff(state = initialState.heros, action) {
             return state;
     }
 }
+const hero = function HeroRequest(state = initialState.hero, action) {
+    let newState;
+    switch (action.type) {
+        case FETCH_HERO:
+            console.log('FETCH_HERO BY ID Action')
+            return action;
+        case RECEIVE_HERO:
+            newState = action.hero;
+            console.log('RECEIVE_HEROS BY ID Action')
+            return newState;
+        default:
+            return state;
+    }
+}
+export {hero};

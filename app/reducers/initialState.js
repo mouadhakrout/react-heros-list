@@ -1,3 +1,4 @@
 export default {
-    heros: []
+    heros: [],
+    hero: null
 };
