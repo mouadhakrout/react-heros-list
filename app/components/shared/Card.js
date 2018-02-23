@@ -15,8 +15,8 @@ class Card extends Component{
     }
     return(
       <div className="card" style={cardStyle} role="button">
-        <img className="card-img-top"  ref={img => this.img = img} src={this.props.imageSrc+"/portrait_xlarge.jpg"}
-             onError={() => this.img.src = '../../../assets/img/not-found.png'}style={{height: '225px'}} onClick={this.handleOnClick} alt="Hero Card image" />
+        <img role="button" className="card-img-top"  ref={img => this.img = img} src={this.props.imageSrc+"/portrait_xlarge.jpg"}
+             onError={() => this.img.src = '../../../assets/img/not-found.png'}style={{height: 'auto'}} onClick={this.handleOnClick} alt="Hero Card image" />
           <div className="card-block"style={cardBlockStyle}>
           <h4 className="card-title">{this.props.content}</h4>
         </div>
