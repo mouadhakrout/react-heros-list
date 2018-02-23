@@ -19,6 +19,7 @@ class HerosList extends Component{
           dots: false,
           infinite: true,
           autoplay: true,
+          pauseOnHover: true,
           speed: 200,
           slidesToShow: 4,
           slidesToScroll: 1
