@@ -25,7 +25,7 @@ class HerosList extends Component{
           slidesToScroll: 1
       };
     const herosList = this.props.heros.map(hero => {
-      return(<div key={"hero"+ hero.id} ><Card heroId={hero.id} content={hero.name} imageSrc={hero.thumbnail.path} /></div>)
+      return(<div key={"hero"+ hero.id} ><Card heroId={hero.id} links={hero.urls} content={hero.name} imageSrc={hero.thumbnail.path} /></div>)
     });
       return(<div className="container"><Title color={"#ec008c"} content={"Liste des super héros :"} />
         <Slider ref={c => this.slider = c} {...settings}>{herosList}</Slider>
